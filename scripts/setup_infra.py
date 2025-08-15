@@ -56,7 +56,7 @@ def latest_ami():
     images.sort(key=lambda x: x["CreationDate"], reverse=True)
     return images[0]["ImageId"]
 
-def ensure_instance_profile(name="AutoScalingAppInstanceProfile"):
+def ensure_instance_profile(name="AutoScalingApp-instance-profile"):
     try:
         iam.get_instance_profile(InstanceProfileName=name)
     except iam.exceptions.NoSuchEntityException:

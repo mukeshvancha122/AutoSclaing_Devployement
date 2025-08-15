@@ -1,0 +1,215 @@
+.showcase-projects {
+  display: flex;
+  width: 100vw;
+  min-height: 80vh;
+  justify-content: center;
+  align-items: center;
+  color: var(--default-color);
+}
+
+.flex-cards-container {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  row-gap: 50px;
+}
+
+.flex-cards-container > div {
+  display: flex;
+}
+
+.project-card {
+  width: 85px;
+  display: flex;
+  background: #000;
+  height: 500px;
+  border-radius: 30px;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 25px;
+  transition: width 0.4s ease-in-out;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(#4a38ec8d, #377cd08f, #cf3e3e94),
+    url(../images/Computer_screen_showing_code.jpg);
+  box-shadow: 7px 0 15px #4a38ecbc, 0 7px 15px #cf3e3ea2;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 7px 0 25px #4a38ecbc, 0 7px 25px #cf3e3ea2;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-card > .row {
+  display: flex;
+  height: 100%;
+  margin: 0px 10px;
+  flex-wrap: nowrap;
+}
+
+.project-card > .row > .icons {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.row > .icons img {
+  width: 65px;
+  height: 65px;
+  padding: 5px;
+  background: var(--default-color);
+  border-radius: 50%;
+  /* border: none; */
+}
+
+.row > .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 370px;
+  color: #fff;
+  padding: 20px 10px;
+  backdrop-filter: blur(8);
+}
+
+.row > .description .project-name {
+  text-align: center;
+  font-size: 25px;
+}
+
+.description p {
+  padding: 15px 0px;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+.description img {
+  display: block;
+  margin-bottom: 10px;
+}
+.description .project-name .link-container {
+  display: block;
+  align-self: end;
+  justify-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-projects .showcase-projects input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.my-projects .showcase-projects input:checked + label {
+  width: 500px;
+}
+
+@media (max-width: 800px) {
+  .showcase-projects {
+    flex-direction: column;
+  }
+
+  .flex-cards-container {
+    display: flex;
+    width: 400px;
+  }
+  .flex-cards-container > div {
+    height: max-content;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 400px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    height: 70px;
+    width: 400px;
+    margin: 20px 0;
+    padding: 5px 15px;
+  }
+
+  .project-card > .row {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .project-card > .row > .icons {
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .row > .icons img {
+    width: 50px;
+    height: 50px;
+    background: var(--default-color);
+  }
+  .row > .description {
+    height: fit-content;
+    padding: 20px;
+  }
+
+  .my-projects .showcase-projects input:checked + label {
+    height: fit-content;
+    width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .flex-cards-container {
+    display: flex;
+    width: 300px;
+  }
+  .flex-cards-container > div {
+    width: 300px;
+  }
+
+  .project-card {
+    height: 52px;
+    width: 300px;
+  }
+
+  .project-card > .row {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .project-card > .row > .icons {
+    padding: 0 5px;
+  }
+
+  .row > .icons img {
+    width: 38px;
+    height: 38px;
+  }
+  .row > .description {
+    font-size: 15px;
+    width: 300px;
+  }
+
+  .row .description > * {
+    margin-bottom: 20px;
+  }
+
+  .my-projects .showcase-projects input:checked + label {
+    height: fit-content;
+    width: 300px;
+  }
+}
